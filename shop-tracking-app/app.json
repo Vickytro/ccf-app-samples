@@ -1,0 +1,28 @@
+{
+  "endpoints": {
+    "/record": {
+      "post": {
+        "js_module": "endpoints/sta.js",
+        "js_function": "recordUserID",
+        "forwarding_required": "always",
+        "authn_policies": [],
+        "mode": "readwrite",
+        "openapi": {
+          
+          }
+        }
+      },
+    "/query":{
+      "get": {
+        "js_module": "endpoints/sta.js",
+        "js_function": "queryCustomer",
+        "forwarding_required": "never",
+        "authn_policies": ["user_cert"],
+        "mode": "readonly",
+        "openapi": {
+          
+            }
+          }
+    }
+  }
+}    
